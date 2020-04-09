@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "axios": "^0.19.2",
     "rxjs": "^6.5.4",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "@types/node": "^13.11.0"
-  }
+  },
+  "main": "dist/index"
 }

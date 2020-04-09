@@ -1,14 +1,6 @@
-import { urlData } from "./url/urlData";
-import { from } from "rxjs";
-import { StartScrapping } from "./request/request";
+import { UrlData } from "./url/urlData";
+import { StartScrapping } from "./scrapper/scrapping";
 
-let myUrlData = new urlData();
+let myUrlData = new UrlData();
 
-console.log(myUrlData.urlToDo);
-
-const urlToDo = from(
-  myUrlData.urlToDo.map(function (item) {
-    return item.url;
-  })
-);
-StartScrapping(urlToDo);
+StartScrapping(myUrlData);
