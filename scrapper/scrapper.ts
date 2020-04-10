@@ -1,6 +1,6 @@
 const axios = require("axios").default;
 import { Observable } from "rxjs";
-import { tap, mergeMap, distinct, catchError } from "rxjs/operators";
+import { tap, mergeMap, distinct, catchError, finalize } from "rxjs/operators";
 import { UrlData } from "../url/urlData";
 import { from, of } from "rxjs";
 
@@ -18,14 +18,15 @@ export function StartScrapping(myUrlData: UrlData) {
   urlToDo
     .pipe(
       distinct(),
-      tap((x) => console.log("Getting url " + x)),
+      tap((url) => console.log("Getting url " + url)),
       mergeMap((url) =>
         httpRequest(url).pipe(
           catchError((err) => {
             return of({message:err.message, url:url});
           })
         )
-      )
+      ),
+      finalize(()=>myUrlData.consolidateResult())
     )
     .subscribe(
       (res) => {
@@ -34,6 +35,7 @@ export function StartScrapping(myUrlData: UrlData) {
           myUrlData.saveDoneData(res);
         } else {
           console.log(`KO:${res.message}:${res.url}`);
+          myUrlData.saveErrorData(res.url, res.message);
         }
       },
       (err) => console.log(`err ${err}`),

@@ -1,32 +1,24 @@
 {
   "url": {
-    "todo": [
-
+    "todo": [{ "url": "https://dzazaddazd8-2_Gundam", "comment": "" }],
+    "done": [
+      {
+        "url": "https://gundam.fandom.com/wiki/MA-04X_Zakrello",
+        "comment": ""
+      },
+      { "url": "https://gundam.fandom.com/wiki/MS-05B_Zaku_I", "comment": "" },
       {
         "url": "https://gundam.fandom.com/wiki/ASW-G-08_Gundam_Barbatos",
         "comment": ""
       },
-      {
-        "url": "https://gundam.fandom.com/wiki/RX-78-2_Gundam",
-        "comment": ""
-      },
-      {
-        "url": "https://gundam.fandom.com/wiki/MA-04X_Zakrello"
-      },
-      {
-        "url": "https://gundam.fandom.com/wiki/MS-05B_Zaku_I"
-      },
-      {
-        "url": "https://gundam.fandom.com/wiki/MS-14A_Gelgoog"
-      },
+      { "url": "https://gundam.fandom.com/wiki/MS-14A_Gelgoog", "comment": "" },
+      { "url": "https://gundam.fandom.com/wiki/RX-78-2_Gundam", "comment": "" }
+    ],
+    "error": [
       {
         "url": "https://dzazaddazd8-2_Gundam",
-        "comment": ""
+        "comment": "getaddrinfo ENOTFOUND dzazaddazd8-2_gundam dzazaddazd8-2_gundam:443"
       }
-
-    ],
-    "done": [],
-    "error": []
+    ]
   }
 }
-
