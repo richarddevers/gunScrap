@@ -4,11 +4,13 @@ import { tap, mergeMap, distinct, catchError, finalize } from "rxjs/operators";
 import { UrlData } from "../url/urlData";
 import { from, of } from "rxjs";
 
-function httpRequest(url: string): Observable<any> {
+export function httpRequest(url: string, option?: any): Observable<any> {
+  if(option)return from(axios.get(url, option));
   return from(axios.get(url));
 }
 
-export function StartScrapping(myUrlData: UrlData) {
+
+export function StartScrapping(myUrlData: UrlData, pic:boolean=false) {
   const urlToDo = from(
     myUrlData.urlToDo.map(function (item) {
       return item.url;
@@ -32,7 +34,7 @@ export function StartScrapping(myUrlData: UrlData) {
       (res) => {
         if (res.status) {
           console.log(`OK:${res.status}:${res.config.url}`);
-          myUrlData.saveDoneData(res);
+          myUrlData.saveDoneData(res, pic);
         } else {
           console.log(`KO:${res.message}:${res.url}`);
           myUrlData.saveErrorData(res.url, res.message);
@@ -42,3 +44,4 @@ export function StartScrapping(myUrlData: UrlData) {
       () => console.log("All url done")
     );
 }
+

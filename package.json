@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.19.2",
+    "get-urls": "^9.2.0",
     "rxjs": "^6.5.4",
     "xmlhttprequest": "^1.8.0"
   },

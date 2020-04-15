@@ -1,0 +1,32 @@
+{
+    "url": {
+      "todo": [
+          {
+              "url":"ferfgerfer"
+          },
+  
+        { "url": "https://gundam.fandom.com/wiki/MS-05B_Zaku_I", "comment": "" },
+        {
+          "url": "https://gundam.fandom.com/wiki/ASW-G-08_Gundam_Barbatos",
+          "comment": ""
+        },
+        {
+          "url": "https://gundam.fandom.com/wiki/MS-14A_Gelgoog",
+          "folder": "MS-14A_Gelgoog"
+        },
+        {
+          "url": "https://gundam.fandom.com/wiki/RX-78-2_Gundam",
+          "folder": "RX-78-2_Gundam"
+        },
+        {
+          "url": "https://gundam.fandom.com/wiki/MA-04X_Zakrello",
+          "folder": "MA-04X_Zakrello"
+        }
+      ],
+      "done": [
+      ],
+      "error": [
+      ]
+    }
+  }
+  

@@ -10,7 +10,7 @@ lib-cov
 *.pid
 *.gz
 *.swp
-
+/scrapped/*
 pids
 logs
 results
